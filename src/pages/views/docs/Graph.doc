@@ -1,0 +1,14 @@
+/**
+ * @title 企业关系图网
+ * @desc 	描述一些标签之间的打通关系
+ */
+import Graph from 'components/Graph'
+import {graph} from 'src/mock/graph'
+
+const Dev = () => {
+  return <div style={{height: '500px'}}>
+    <Graph data={graph} />
+  </div>
+}
+
+@component Graph

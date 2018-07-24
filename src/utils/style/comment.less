@@ -1,0 +1,178 @@
+@import 'variables.less';
+@import 'antd.less';
+
+// 滚动条
+::-webkit-scrollbar/*整体部分*/
+{
+  width: 8px;
+  height:10px;
+}
+
+::-webkit-scrollbar-thumb/*滑块*/
+{
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.4);
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover/*滑块效果*/
+{
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background: #777;
+  opacity: .8;
+}
+
+input::-ms-clear{display: none;}
+input::-ms-reveal{display: none;}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// wz-css
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.default-color {
+  color: @default-color;
+}
+
+.warn-color {
+  color: @warn-color;
+}
+
+.error-color {
+  color: @error-color;
+}
+
+.success-color {
+  color: @success-color;
+}
+
+.disabled-color {
+  color: @disabled-color;
+}
+
+.default-bg {
+  background-color: @default-color;
+  color: #fff;
+}
+
+.warn-bg {
+  background-color: @warn-color;
+  color: #fff;
+}
+
+.error-bg {
+  background-color: @error-color;
+  color: #fff;
+}
+
+.success-bg {
+  background-color: @success-color;
+  color: #fff;
+}
+
+.div-center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear-float {
+  &:after {
+    content:'';
+    display:table;
+    clear:both;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.v-hide {
+  visibility: hidden;
+}
+
+.v-show {
+  visibility: visible;
+}
+
+.o-hide {
+  opacity: 0;
+}
+
+.o-show {
+  opacity: 1;
+}
+
+.inline-div {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.a-btn {
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.tooltips{
+  position: absolute;
+  max-width: 200px;
+  height: auto;
+  font-family: '微软雅黑';
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+  /*border: 1px solid #999;*/
+  background: rgba(0,0,0,0.5);
+  border-radius: 3px;
+  /*box-shadow: 3px 3px 1px #999;*/
+  padding: 8px;
+  /*display:none;*/
+  word-wrap:break-word;
+  word-break:break-all;
+  z-index:4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mg-r-1 {
+  margin-right: 8px;
+}
+
+.chart-box {
+  height: 300px;
+}

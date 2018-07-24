@@ -1,0 +1,94 @@
+/**
+ * @title 定制基础 图表 —— Recharts
+ * @desc 	结合Echarts + React 进行图表封装
+ */
+import React, {Component} from 'ract'
+import Recharts from 'components/Recharts'
+import xhr from 'components/xhr'
+
+class EchartsGraph extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            options: {}
+        }
+    }
+
+    componentDidMount() {
+        this.getData()
+    }
+
+    getData() {
+        xhr({
+            type: 'GET',
+            url: 'data/graph_node.json',
+            success: res => {
+                res && this.setOptions(res.data)
+            }
+        })
+    }
+
+    setOptions(data) {
+        let options =  {
+            title: {
+                text: 'NPM Dependencies'
+            },
+            animationDurationUpdate: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series : [
+                {
+                    type: 'graph',
+                    layout: 'none',
+                    // progressiveThreshold: 700,
+                    data: data.nodes.map(function (node) {
+                        return {
+                            x: node.x,
+                            y: node.y,
+                            id: node.id,
+                            name: node.label,
+                            symbolSize: node.size,
+                            itemStyle: {
+                                normal: {
+                                    color: node.color
+                                }
+                            }
+                        };
+                    }),
+                    edges: data.edges.map(function (edge) {
+                        return {
+                            source: edge.sourceID,
+                            target: edge.targetID
+                        };
+                    }),
+                    label: {
+                        emphasis: {
+                            position: 'right',
+                            show: true
+                        }
+                    },
+                    roam: true,
+                    focusNodeAdjacency: true,
+                    lineStyle: {
+                        normal: {
+                            width: 0.5,
+                            curveness: 0.3,
+                            opacity: 0.7
+                        }
+                    }
+                }
+            ]
+        }
+
+        this.setState({options})
+    }
+
+    render() {
+        const {options} = this.state;
+        return <div style={{height: '500px'}}>
+            <Recharts options={options} height={'500px'} type='graph'/>
+        </div>
+    }
+}
+
+@component Recharts

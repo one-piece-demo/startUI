@@ -1,0 +1,31 @@
+/**
+ * @title antd下的Icon
+ * @desc 	图标类型，参考：
+ * @link https://ant.design/components/icon-cn/
+ */
+import {Icon} from 'antd'
+
+const IconAntd = () => {
+  return <p style={{fontSize: '16px'}}>
+    <Icon type="apple" />
+    <Icon type="shrink" />
+    <Icon type="step-forward" />
+  </p>
+}
+
+/**
+ * @title 定制 Icon
+ * @desc 	结合fontawesome图标类型，参考：
+ * @link http://fontawesome.io/icons/
+ */
+import IconFont from 'components/Icon'
+
+const IconBasic = () => {
+  return <p style={{fontSize: '16px'}}>
+    <IconFont type="weixin" />
+    <IconFont type="address-book" />
+    <IconFont type="address-book-o" />
+  </p>
+}
+
+@component Icon

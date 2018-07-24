@@ -1,0 +1,13 @@
+/**
+ * @title 未开发模块UI
+ * @desc 	项目中未开发模块UI设计
+ */
+import NotDev from 'components/NotDev'
+
+const Dev = () => {
+  return <div style={{height: '400px'}}>
+    <NotDev top={100}/>
+  </div>
+}
+
+@component NotDev

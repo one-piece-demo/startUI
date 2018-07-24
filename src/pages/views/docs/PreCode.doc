@@ -1,0 +1,60 @@
+/**
+ * @title 代码显示高亮
+ */
+import PreCode from 'components/PreCode'
+
+let code = `
+  let PreDemo = () => {
+    return <div>
+      <PreCode>{code}</PreCode>
+    </div>
+  }
+`
+
+const PreDemo = () => {
+  return <div>
+    <PreCode>{code}</PreCode>
+  </div>
+}
+
+/**
+ * @title 代码显示高亮, transparent
+ */
+ 
+import PreCode from 'components/PreCode'
+
+let code2 = `
+  let PreDemo = () => {
+    return <div>
+      <PreCode>{code}</PreCode>
+    </div>
+  }
+`
+
+const PreDemoTrans = () => {
+  return <div>
+    <PreCode transparent>{code2}</PreCode>
+  </div>
+}
+
+/**
+ * @title 代码显示更换主题， light 明亮
+ */
+ 
+import PreCode from 'components/PreCode'
+
+let themeCode = `
+  let PreDemo = () => {
+    return <div>
+      <PreCode>{code}</PreCode>
+    </div>
+  }
+`
+
+const PreDemoTheme = () => {
+  return <div>
+    <PreCode theme='light'>{themeCode}</PreCode>
+  </div>
+}
+
+@component PreCode

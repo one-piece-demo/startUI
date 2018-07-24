@@ -1,0 +1,14 @@
+/**
+ * @title 散乱气泡图（force bubble）
+ * @desc 	描述一些标签的权重
+ */
+import ForceBubble from 'components/ForceBubble'
+import {bubbleData} from 'src/mock/bubble'
+console.log(bubbleData)
+const BDev = () => {
+  return <div style={{height: '400px'}}>
+    <ForceBubble data={bubbleData.data} radiusMaker='value' name='name' value={{key: 'value'}} />
+  </div>
+}
+
+@component ForceBubble

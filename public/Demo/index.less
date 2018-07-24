@@ -1,0 +1,51 @@
+.demo {
+  margin-top: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
+  .markdown {
+    margin-bottom: 0;
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .bfd-col:last-child > .demo:first-child {
+    margin-top: 20px;
+  }
+}
+
+.demo__title {
+  margin: 20px;
+  font-size: 14px;
+}
+
+.demo__content {
+  margin: 20px;
+}
+
+.demo__desc {
+  background-color: #f5f5f5;
+  padding: 16px;
+}
+
+.demo__toggle {
+  text-align: right;
+  font-size: 14px;
+  color: #33a9dd;
+}
+
+.demo__code {
+  display: none;
+  // margin-top: -10px;
+  max-height: 500px;
+  overflow-y: auto; 
+}
+
+.demo--open {
+  .demo__code {
+    display: block;
+  }
+}

@@ -1,0 +1,22 @@
+/**
+ * @title xhr 基本功能
+ */
+import xhr from 'components/xhr'
+import {Button, message} from 'antd'
+
+const MessageSuccess = () => {
+  return (
+    <Button onClick={() => xhr({
+      type: 'post',
+      url: 'user/5',
+      success(res) {
+        message.info(res.msg || '删除成功！')
+      },
+      error: err => {
+        message.error(err)
+      }
+    })}>删除测试</Button>
+  )
+}
+
+@component xhr

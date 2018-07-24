@@ -1,0 +1,222 @@
+.cube-box {
+  position: absolute;
+  top: 26%;
+  left: 48%;
+  width: 100px;
+  height: 100px;
+  margin: auto;		  
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  transform-style: preserve-3d;
+  @media (max-width: 670px) {
+    left: 38%;
+  }
+}
+.cube-box div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  transform-origin: center;
+}
+
+.cube-box div:nth-of-type(1) {
+  background-color: red;
+}
+
+.cube-box div:nth-of-type(2) {
+  background-color: yellow;
+}
+
+.cube-box div:nth-of-type(3) {
+  background-color: green;
+}
+
+.cube-box div:nth-of-type(4) {
+  background-color: blue;
+}
+
+.cube-box div:nth-of-type(5) {
+  background-color: pink;
+}
+
+.cube-box div:nth-of-type(6) {
+  background-color: darkmagenta;
+}
+
+.cube-box div:nth-of-type(1),
+.cube-box div:nth-of-type(2){
+  transform: rotatex(90deg);
+}
+
+.cube-box div:nth-of-type(3),
+.cube-box div:nth-of-type(4){
+  transform: rotatey(90deg);
+}
+
+.cube-box{
+  transform: rotatex(45deg) rotatey(45deg);
+}
+
+.cube-box div:nth-of-type(1){
+  transform: rotatex(90deg) translatez(50px);
+}
+
+.cube-box div:nth-of-type(2){
+  transform: rotatex(90deg) translatez(-50px);
+}
+
+.cube-box div:nth-of-type(3){
+  transform: rotatey(90deg) translatez(50px); 
+}
+
+.cube-box div:nth-of-type(4){
+  transform: rotatey(90deg) translatez(-50px); 
+}
+
+.cube-box div:nth-of-type(5){
+  transform: translatez(50px); 
+}
+
+.cube-box div:nth-of-type(6){
+  transform: translatez(-50px); 
+}
+
+  /*animate*/
+.cube-box.animate {
+    animation: cube-box-move ease 4s 0s infinite;
+}
+
+.cube-box.animate div {
+    animation: ease 4s 0s infinite;
+}
+
+.cube-box.animate div:nth-of-type(1) {
+    animation-name: cube-box1-move;
+}
+
+.cube-box.animate div:nth-of-type(2) {
+    animation-name: cube-box2-move;
+}
+
+.cube-box.animate div:nth-of-type(3) {
+    animation-name: cube-box3-move;
+}
+
+.cube-box.animate div:nth-of-type(4) {
+    animation-name: cube-box4-move;
+}
+
+.cube-box.animate div:nth-of-type(5) {
+    animation-name: cube-box5-move;
+}
+
+.cube-box.animate div:nth-of-type(6) {
+    animation-name: cube-box6-move;
+}
+
+/*动画*/
+  @keyframes cube-box-move {
+        0% {
+            transform: rotatex(0deg) rotatey(0deg)
+        }
+        50% {
+            transform: rotatex(45deg) rotatey(45deg)
+        }
+        100% {
+            transform: rotatex(405deg) rotatey(405deg)
+        }
+    }
+
+    @keyframes cube-box1-move {
+        0% {
+            transform: rotatex(0deg);
+        }
+        25% {
+            transform: rotatex(90deg);
+        }
+        50% {
+            transform: rotatex(90deg) translatez(50px);
+        }
+        100% {
+            transform: rotatex(90deg) translatez(50px);
+        }
+    }
+
+    @keyframes cube-box2-move {
+        0% {
+            transform: rotatex(0deg);
+        }
+        25% {
+            transform: rotatex(90deg);
+        }
+        50% {
+            transform: rotatex(90deg) translatez(-50px);
+        }
+        100% {
+            transform: rotatex(90deg) translatez(-50px);
+        }
+    }
+
+    @keyframes cube-box3-move {
+        0% {
+            transform: rotatex(0deg);
+        }
+        25% {
+            transform: rotatey(90deg);
+        }
+        50% {
+            transform: rotatey(90deg) translatez(50px);
+        }
+        100% {
+            transform: rotatey(90deg) translatez(50px);
+        }
+    }
+
+    @keyframes cube-box4-move {
+        0% {
+            transform: rotatex(0deg);
+        }
+        25% {
+            transform: rotatey(90deg);
+        }
+        50% {
+            transform: rotatey(90deg) translatez(-50px);
+        }
+        100% {
+            transform: rotatey(90deg) translatez(-50px);
+        }
+    }
+
+    @keyframes cube-box5-move {
+        0% {
+
+        }
+        25% {
+            transform: translatez(0px);
+        }
+        50% {
+            transform: translatez(50px);
+        }
+        100% {
+            transform: translatez(50px);
+        }
+    }
+
+    @keyframes cube-box6-move {
+        0% {
+
+        }
+        25% {
+            transform: translatez(0px);
+        }
+        50% {
+            transform: translatez(-50px);
+        }
+        100% {
+            transform: translatez(-50px);
+        }
+    }

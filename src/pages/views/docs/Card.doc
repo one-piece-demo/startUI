@@ -1,0 +1,53 @@
+/**
+ * @title 定制 Card
+ * @desc 	修改Card交互使用方式, 区别antd中的Card
+ */
+import {Card, CardHead, CardBody, CardFooter } from 'components/Card'
+
+const CardBasic = () => {
+  return <Card >
+    <CardHead>head</CardHead>
+    <CardBody>body</CardBody>
+    <CardFooter>footer</CardFooter>
+  </Card>
+}
+
+/**
+ * @title 定制 无边框 Card
+ * @desc 	在灰色背景上使用无边框的卡片
+ */
+import {Card, CardHead, CardBody, CardFooter } from 'components/Card'
+
+const CardBorder = () => {
+  return <div style={{ background: '#ECECEC', padding: '30px' }}>
+    <Card border={false}>
+      <CardHead>head</CardHead>
+      <CardBody>body</CardBody>
+      <CardFooter>footer</CardFooter>
+    </Card>
+  </div>
+}
+
+
+/**
+ * @title 定制 图片 Card 展示
+ * @desc 	灵活内容展示
+ */
+import {Card, CardBody, CardFooter } from 'components/Card'
+
+const CardImg = () => {
+  return <div>
+    <Card style={{width: '50%'}}>
+      <CardBody style={{height: '400px'}}>
+        <img alt="example" width="100%" height='100%' src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+      </CardBody>
+      <CardFooter>
+        <h3>Europe Street beat</h3>
+        <p>www.instagram.com</p>
+      </CardFooter>
+    </Card>
+  </div>
+}
+
+
+@component Card

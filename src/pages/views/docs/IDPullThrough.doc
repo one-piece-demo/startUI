@@ -1,0 +1,14 @@
+/**
+ * @title ID拉通图（简易venn图）
+ * @desc 	描述一些标签之间的打通关系
+ */
+import PullThroughChart from 'components/PullThroughChart'
+import {IDPullData} from 'src/mock/IDPull'
+
+const Dev = () => {
+  return <div style={{height: '400px'}}>
+    <PullThroughChart data={IDPullData} />
+  </div>
+}
+
+@component PullThroughChart
